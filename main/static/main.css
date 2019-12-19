@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.backGround{
+	background-image: url('img.jpg');
+	padding: 20%;
+}
+
+.backPic{
+	background-image: url('img2.jpg');
+}
+
+body{
+	background-color: black;
+}
+
+.height{
+	height: 500px;
+	padding: 10%;
+}
+
+footer {
+	bottom: 0px;
+	height: auto;
+	left: 0;
+	position: relative;
+	right: 0;
+}

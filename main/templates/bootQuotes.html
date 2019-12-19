@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Quotes</title>
+	{% load static %}
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="{% static 'main.css' %}">
+	
+</head>
+<body>
+	{% csrf_token %}
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+		<div class="container-fluid">
+
+			<a class="navbar-brand" href="/"> Quotes </a>
+
+			<button class="navbar-toggler" data-toggle="collapse" data-target="#navMenu">
+				<span class="navbar-toggler-icon"> </span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navMenu">
+				<ul class="nav navbar-nav ml-auto">
+					<li class="nav-item">
+						<a href="All" class="nav-link">
+							All
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="Random" class="nav-link">
+							Random
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="jumbotron jumbotron-fluid backGround">
+		<div class="container">
+			<h1 class="display-3">
+				Black Quotes
+			</h1>
+			<p class="lead font-weight-light">
+				Just do it !
+			</p>
+		</div>
+	</div>
+
+	<div class="container-fluid text-white pt-5 pb-5 text-center">
+		<div class="row pb-5 " >
+			<div class="col">
+				<p id="text" class="h4 font-italic"></p>
+			</div>
+		</div>	
+		<div class="row text-center">
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col pl-auto">
+				<button class="btn btn-dark" id="prev">Previous</button>
+			</div>
+			<div class="col pr-auto">
+				<button class="btn btn-dark" id="next">Next</button>
+			</div>
+			<div class="col"></div>
+			<div class="col"></div>
+		</div>
+	</div>
+
+
+<footer class="page-footer font-small text-center  bg-dark pt-4">
+
+	<div class="text-white">
+		Author :
+		<a href="https://instagram.com/s_a_heaven_in_star?igshid=dyeua9rc8tdi" target="_blank" class="text-white text-center">Sakshi</a>
+	</div>
+	
+	<div class="footer-copyright text-center  text-white py-3"> 
+		© 2019 Copyright Made by
+		<a href="https://github.com/nishchay17" class="text-white" target="_blank"> Nishchay17</a>
+	</div>
+		  
+</footer>
+
+{{ Quotes|json_script:"data" }}
+<script id="data" type="application/json"></script>
+<script src="{% static 'main.js' %}"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
